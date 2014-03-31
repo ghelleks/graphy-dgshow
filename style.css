@@ -52,3 +52,12 @@ div.post-thumbnail img {
 .entry-content img[src="http://dgshow.org/files/2013/03/rss3.png"] {
   margin: 0;
 }
+
+/* make "continue reading" look less ridiculous */
+.continue-reading {
+   text-transform: none;
+   margin-right: 10%;
+   margin-bottom: 10px;
+   display: block;
+   text-align: right;
+}
