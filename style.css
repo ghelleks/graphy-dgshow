@@ -14,8 +14,17 @@ Text Domain: graphy-dgshow
 
 @import url("../graphy/style.css");
 
+/* hide silly G+ profile */
+div.sharedaddy {
+        display: none;
+}
+
 header h1 {
 	clear: none;
+}
+
+.site-branding {
+	max-width: 400px;
 }
 
 div.entry-summary {
