@@ -1,4 +1,5 @@
 <?php 
+
 /*
  * Support the Twitter Card plugin from Niall: https://github.com/niallkennedy/twitter-cards
  */
@@ -13,4 +14,16 @@ function add_twitter_card_properties( $twitter_card ) {
         }
         return $twitter_card;
 } }
+
+/*
+ * Force the RSS feed to present HTTP urls instead of HTTPS
+ * so we don't run afoul all the Android podcasting apps that don't support TLS
+ */
+if ( ! function_exists( 'dgshow_podcast_audio_by_http' ) ) {
+add_filter('podpress_item_enclosure_and_itunesduration', 'dgshow_podcast_audio_by_http',100);
+function dgshow_podcast_audio_by_http($content) {
+  $content = str_replace('https://dgshow.org/podpress_trac', 'http://dgshow.org/podpress_trac', $content);
+  return $content;
+} }
+
 ?>
