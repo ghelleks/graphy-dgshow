@@ -26,4 +26,8 @@ function dgshow_podcast_audio_by_http($content) {
   return $content;
 } }
 
+add_action( 'after_setup_theme', 'dgshow_theme_setup' );
+function dgshow_theme_setup() {
+   add_image_size( 'round', 150, 150, array('center', 'center')); // 220 pixels wide by 180 pixels tall, soft proportional crop mode
+}
 ?>
