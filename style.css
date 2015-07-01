@@ -12,7 +12,7 @@ Template: graphy
 Text Domain: graphy-dgshow
 */
 
-@import url("//dgshow.org/wp-content/themes/graphy-dgshow/style.css");
+@import url("//dgshow.org/wp-content/themes/graphy/style.css");
 
 /* hide silly G+ profile */
 div.sharedaddy {
