@@ -58,6 +58,10 @@ div.post-thumbnail img {
 }
 
 /* get rid of borders on RSS icons */
+.entry-content img {
+  margin-top: 0;
+}
+
 .entry-content img[src="//dgshow.org/files/2013/03/rss3.png"] {
   margin: 0;
 }
