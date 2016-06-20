@@ -28,7 +28,7 @@ header h1 {
 }
 
 div.entry-summary {
-	clear: both;
+	clear: none;
 }
 
 /* make the thumbnails circular */
@@ -45,16 +45,22 @@ div.post-thumbnail {
 	background-size: 150px;
 }
 div.post-thumbnail img {
-	opacity: 0;
-	filter: alpha(opacity=0);
+	opacity: 1;
+	filter: alpha(opacity=1);
+  transition: none;
 }
 
 /* undo wierd behavior from parent style */
 @media screen and (min-width: 960px) {
-        .no-sidebar .post-thumbnail {
+        .no-sidebar .post-full-summary .post-thumbnail {
                 margin-left: 20px;
                 margin-right: 20px;
         }
+}
+
+/* get rid of thumbnail on full post page */
+div.post-full article div.post-thumbnail {
+  display: none;
 }
 
 /* get rid of borders on RSS icons */
@@ -74,3 +80,11 @@ div.post-thumbnail img {
    display: block;
    text-align: right;
 }
+
+/* remove author info */
+div.author-profile { display: none; }
+div.cat-links { display: none; }
+span.byline { display: none; }
+span.author { display: none; }
+span.entry-meta-sep { display: none; }
+span.comments-link { display: none; }
